@@ -1,0 +1,167 @@
+* {
+    padding:0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {}
+
+body {
+    background-color: #60424c;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    position:sticky;
+    top:0px;
+}
+
+.navigasjon-liste {
+    display: flex;
+    gap:1rem;
+    list-style-type: none;
+    list-style-position: inside; /* bullet inne i box */
+    
+   
+}
+a {
+    color:white;
+}
+
+h1 {
+color:#ff5959;
+font-family: "Jockey One", serif;
+font-weight: 400;
+font-size: 125px;
+width: 100%;
+text-align: center;
+margin-bottom: 2rem;
+}
+
+h3 {
+    font-size: 2rem;
+    font-family: "Jockey One", serif;
+font-weight: 400;
+color:white;
+
+}
+ span.planeT {
+    font-family: "Jockey One", serif;
+    color:#ff5959;
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+
+#hero-mars {
+    display: flex;
+    height: 97vh;
+    width: 100%;
+}
+
+#hero-mars {
+display: flex;
+}
+
+.text-wrapper {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    flex:1;
+    margin-top:3rem;
+}
+.text-wrapper p {
+    font-family: "Josefin Sans", serif;
+    width:75%;
+    font-size: 24px;
+    line-height: 1.2;
+    margin-bottom: 1rem;
+    font-weight:light;
+    color:whitesmoke;
+
+}
+
+.image-wrapper{
+    flex:1;
+
+}
+.image-wrapper img {
+    width:800px;
+    height: auto;
+    filter: drop-shadow(10px 10px 50px rgba(255, 89, 89, 0.7));
+}
+#bildegalleri {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.galleri-wrapper {
+    width:1280px;
+    
+}
+.galleri-wrapper h2 {
+    margin-bottom: 2rem;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Seks kolonner med like bredde */
+    grid-gap: 10px; /* Gap mellom bildene */
+    width: 1280px; /* Fast bredde på gridet */
+    margin: 0 auto; /* Sentrerer gridet horisontalt */
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Sørger for at bildene dekker sine områder uten å bli forvrengt */
+}
+
+/* Bilder med ulike størrelser */
+.image-grid img:nth-child(1) {
+    grid-column: span 2; /* Strekker bildet over 2 kolonner */
+    grid-row: span 2; /* Strekker bildet over 2 rader */
+}
+
+.image-grid img:nth-child(2) {
+    grid-column: span 3; /* Strekker bildet over 3 kolonner */
+}
+
+.image-grid img:nth-child(3) {
+    grid-row: span 1; /* Strekker bildet over 2 rader */
+}
+
+.image-grid img:nth-child(4) {
+    grid-column: span 1; /* Strekker bildet over 2 kolonner */
+    grid-row: span 1; /* Strekker bildet over 3 rader */
+}
+
+.image-grid img:nth-child(5) {
+    grid-column: span 3; /* Strekker bildet over 3 kolonner */
+}
+
+.image-grid img:nth-child(6) {
+    grid-column: span 2; /* Strekker bildet over 2 kolonner */
+}
+
+
+
+section {
+    height: 93vh;
+    color:white;
+} 
+ 
+#hero{
+    height: 93vh;
+}
+
+
+
+
+
+#info {
+    background-color: black;
+}

@@ -1,0 +1,154 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+}
+
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-top:4vh;
+    background-color: #4A4849;
+    position:sticky;
+    top:0px;
+}
+
+#hero {
+    padding: 3rem;
+}
+#hero img {
+    width: 100%;
+    height:100%;
+    object-fit: contain;
+}
+
+.navigasjon-liste {
+    display: flex;
+    gap:1rem;
+    list-style-type: none;
+    list-style-position: inside; /* bullet inne i box */
+    
+   
+}
+
+.navigasjon-ul li {
+
+}
+
+.navigasjon-ul li a {
+
+}
+
+div.logo {
+    color:white;
+
+}
+
+/* ------ frontpage ------- */
+
+#hero-frontpage{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    height:93vh;
+    background-color: #4A4849;
+}
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.content-wrapper p {
+    width: 50%;
+    font-size: 24px;
+    font-family: "Josefin Sans", serif;
+    line-height: 1.6;
+    margin-top: 1em;
+    margin-bottom: 2rem;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    transition: all 0.3s ease-in-out;
+}
+img:hover{
+    scale: 1.2;
+   
+}
+.heading-front {
+    width: 100%;
+    font-family: "Jockey One", serif;
+    font-size: 125px;
+    font-weight: 500;
+    color:#ff5959;
+    
+    
+    text-align: center;
+}
+
+
+
+/* ------ end frontpage ------- */
+
+
+
+
+a {
+    color:white;
+}
+/* 
+section > h1, h2,  {
+padding:1rem;
+    background-color: black;
+}
+Logo */
+
+h3 {
+    font-size: 2rem;
+    font-family: "Jockey One", serif;
+font-weight: 400;
+
+}
+ span.planeT {
+    font-family: "Jockey One", serif;
+    color:#ff5959;
+    font-size: 2rem;
+    font-weight: 400;
+
+}
+
+section {
+    padding-top:7vh;
+    height: 93vh;
+    color:white;
+} 
+ 
+#hero{
+    height: 93vh;
+}
+
+
+
+#bildegalleri {
+}
+
+#info {
+    background-color: black;
+}
+
