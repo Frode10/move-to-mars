@@ -9,17 +9,19 @@ html {
 }
 
 body {
+    background-color: #4A4849;
+
 }
+
 
 
 
 nav {
     display: flex;
     justify-content: space-between;
-    padding-left: 4rem;
-    padding-right: 4rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     padding-top:4vh;
-    background-color: #4A4849;
     position:sticky;
     top:0px;
 }
@@ -42,16 +44,17 @@ nav {
    
 }
 
-.navigasjon-ul li {
-
-}
-
-.navigasjon-ul li a {
-
-}
-
 div.logo {
     color:white;
+
+}
+
+/* logo */
+span.planeT {
+    font-family: "Jockey One", serif;
+    color:#ff5959;
+    font-size: 2rem;
+    font-weight: 400;
 
 }
 
@@ -62,9 +65,8 @@ div.logo {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
+    color:white;
     height:93vh;
-    background-color: #4A4849;
 }
 .content-wrapper {
     display: flex;
@@ -100,55 +102,5 @@ img:hover{
     
     
     text-align: center;
-}
-
-
-
-/* ------ end frontpage ------- */
-
-
-
-
-a {
-    color:white;
-}
-/* 
-section > h1, h2,  {
-padding:1rem;
-    background-color: black;
-}
-Logo */
-
-h3 {
-    font-size: 2rem;
-    font-family: "Jockey One", serif;
-font-weight: 400;
-
-}
- span.planeT {
-    font-family: "Jockey One", serif;
-    color:#ff5959;
-    font-size: 2rem;
-    font-weight: 400;
-
-}
-
-section {
-    padding-top:7vh;
-    height: 93vh;
-    color:white;
-} 
- 
-#hero{
-    height: 93vh;
-}
-
-
-
-#bildegalleri {
-}
-
-#info {
-    background-color: black;
 }
 

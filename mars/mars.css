@@ -4,10 +4,9 @@
     box-sizing: border-box;
 }
 
-html {}
-
 body {
     background-color: #60424c;
+    padding:1rem;
 }
 
 nav {
@@ -15,21 +14,49 @@ nav {
     justify-content: space-between;
     padding-left: 4rem;
     padding-right: 4rem;
-    position:sticky;
-    top:0px;
+    padding-top: 1.5rem;
+    position: sticky;
+    top: 0px;
+    z-index: 99; /* Sørger for at navbar forblir klikkbar over annet innhold */
+
 }
+
+
 
 .navigasjon-liste {
     display: flex;
-    gap:1rem;
+    gap: 1rem;
     list-style-type: none;
-    list-style-position: inside; /* bullet inne i box */
-    
-   
+    list-style-position: inside;
 }
-a {
-    color:white;
+
+.navigasjon-liste a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer; 
 }
+
+.navigasjon-liste a:visited {
+    color: white; 
+}
+
+.navigasjon-liste a:hover {
+    text-decoration: underline; 
+}
+
+
+@media (max-width:768px) {
+    nav {
+        flex-direction: column;
+    }
+    .navigasjon-liste {
+        flex-direction: column;
+        align-items: center;
+        padding: 2rem;
+    }
+}
+
 
 h1 {
 color:#ff5959;
@@ -56,14 +83,20 @@ color:white;
 
 }
 
-#hero-mars {
+#section-01 {
     display: flex;
-    height: 97vh;
+    min-height: fit-content;
     width: 100%;
 }
 
 #hero-mars {
 display: flex;
+}
+
+@media (max-width:992px) {
+    #section-01 {
+        flex-direction: column;
+    }
 }
 
 .text-wrapper {
@@ -89,65 +122,139 @@ display: flex;
 
 }
 .image-wrapper img {
-    width:800px;
+    width: 100%;
+    max-width:800px;
     height: auto;
     filter: drop-shadow(10px 10px 50px rgba(255, 89, 89, 0.7));
 }
-#bildegalleri {
+
+/* section bildegalleri og faktaliste */
+#bildegalleri, #faktaliste {
     display:flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
+    margin-bottom: 6rem;
+    min-height: fit-content;
 }
 
 .galleri-wrapper {
-    width:1280px;
+    width:100%;
+    max-width: 1280px;
     
 }
 .galleri-wrapper h2 {
     margin-bottom: 2rem;
 }
+
+/* Bildegrid */
 .image-grid {
     display: grid;
-    grid-template-columns: repeat(6, 1fr); /* Seks kolonner med like bredde */
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Dynamiske kolonner med minimum bredde på 200px */
+    grid-auto-rows: 300px; /* Standard høyde på radene */
     grid-gap: 10px; /* Gap mellom bildene */
-    width: 1280px; /* Fast bredde på gridet */
-    margin: 0 auto; /* Sentrerer gridet horisontalt */
+    width: 100%; /* Gjør gridet full bredde */
+    margin: 0 auto; /* Sentrer gridet horisontalt */
 }
 
 .image-grid img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Sørger for at bildene dekker sine områder uten å bli forvrengt */
+    object-fit: cover; /* Sørger for at bildene dekker sin plass uten å bli forvrengt */
 }
 
 /* Bilder med ulike størrelser */
 .image-grid img:nth-child(1) {
-    grid-column: span 2; /* Strekker bildet over 2 kolonner */
-    grid-row: span 2; /* Strekker bildet over 2 rader */
+    grid-column: span 2; /* Bildet strekker seg over 2 kolonner */
+    grid-row: span 2; /* Bildet strekker seg over 2 rader */
 }
 
 .image-grid img:nth-child(2) {
-    grid-column: span 3; /* Strekker bildet over 3 kolonner */
+    grid-column: span 3; /* Bildet strekker seg over 3 kolonner */
 }
 
 .image-grid img:nth-child(3) {
-    grid-row: span 1; /* Strekker bildet over 2 rader */
+    grid-row: span 1; /* Standard størrelse */
 }
 
 .image-grid img:nth-child(4) {
-    grid-column: span 1; /* Strekker bildet over 2 kolonner */
-    grid-row: span 1; /* Strekker bildet over 3 rader */
+    grid-column: span 1; /* Standard størrelse */
+    grid-row: span 1;
 }
 
 .image-grid img:nth-child(5) {
-    grid-column: span 3; /* Strekker bildet over 3 kolonner */
-}
-
-.image-grid img:nth-child(6) {
-    grid-column: span 2; /* Strekker bildet over 2 kolonner */
+    grid-column: span 3; /* Bildet strekker seg over 3 kolonner */
 }
 
 
+
+/* Responsiv tilpasning for skjermstørrelser under 992px */
+@media (max-width: 992px) {
+    .image-grid {
+        grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Justerer minimum kolonnebredde */
+    }
+
+    .image-grid img:nth-child(1),
+    .image-grid img:nth-child(2) {
+        grid-column: span 1; /* Forhindrer at disse bildene blir for små */
+        grid-row:span 1;
+    }
+}
+
+/* Responsiv tilpasning for skjermstørrelser under 768px */
+@media (max-width: 768px) {
+    .image-grid {
+        grid-template-columns: repeat(2, minmax(150px, 1fr)); /* Reduserer minimum bredde til 150px */
+    }
+
+    .image-grid img:nth-child(1),
+    .image-grid img:nth-child(2),
+    .image-grid img:nth-child(5) {
+        grid-column: span 1; /* Sørger for at disse bildene tar mer plass på små skjermer */
+        grid-row: span 1;
+    }
+
+    .image-grid img:nth-child(3),
+    .image-grid img:nth-child(4) {
+        grid-column: span 1; /* Setter bildene til å være enkeltkolonne på små skjermer */
+    }
+}
+
+/* Responsiv tilpasning for skjermstørrelser under 480px (smarttelefoner) */
+@media (max-width: 480px) {
+    .image-grid {
+        grid-template-columns: repeat(1, minmax(120px, 1fr)); /* Endrer minimum bredde til 120px */
+    }
+
+    .image-grid img {
+        grid-column: span 1; /* Alle bilder blir én kolonne på svært små skjermer */
+        grid-row: span 1;
+    }
+}
+
+
+
+
+/* ---- her kommer faktaliste css ------ */
+
+.faktaliste-box {
+    
+    background-color: #ff595923;
+    padding: 2rem 2rem 2rem 2rem;
+    font-family: "Jockey One", serif;
+    font-weight: 400;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+
+    border: 4px solid rgba(49, 49, 49, 0.5); /* Gir en synlig kant */
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.5), 
+                inset -5px -5px 10px rgba(49, 49, 49, 0.5);
+    display: flex;
+}
+
+.faktaliste-box p {
+    line-height: 1.6;
+}
 
 section {
     height: 93vh;
