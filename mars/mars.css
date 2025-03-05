@@ -150,13 +150,32 @@ display: flex;
     padding:100px 2rem 100px 2rem;
 }
 
+.faktaliste-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+    
+    
+}
+
 .galleri-wrapper {
     width:100%;
     max-width: 1280px;
     
 }
+#faktaliste .galleri-wrapper {
+    max-width: 900px;
+}
+
+#faktaliste p {
+    font-size: 24px;
+}
+
 .galleri-wrapper h2 {
     margin-bottom: 2rem;
+
 }
 
 /* Bildegrid */
