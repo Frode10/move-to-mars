@@ -1,29 +1,7 @@
-*{
-    margin:0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* css frontpage - css for navigasjon er i global.css*/
 
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    background-color: #4A4849;
-
-}
-
-
-
-
-nav {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top:4vh;
-    position:sticky;
-    top:0px;
+body{
+    background-color: #616161;
 }
 
 #hero {
@@ -34,31 +12,6 @@ nav {
     height:100%;
     object-fit: contain;
 }
-
-.navigasjon-liste {
-    display: flex;
-    gap:1rem;
-    list-style-type: none;
-    list-style-position: inside; /* bullet inne i box */
-    
-   
-}
-
-div.logo {
-    color:white;
-
-}
-
-/* logo */
-span.planeT {
-    font-family: "Jockey One", serif;
-    color:#ff5959;
-    font-size: 2rem;
-    font-weight: 400;
-
-}
-
-/* ------ frontpage ------- */
 
 #hero-frontpage{
     display: flex;

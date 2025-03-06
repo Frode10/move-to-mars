@@ -1,7 +1,14 @@
-*{
+/* GLOBAL CSS for meny/navigasjon alle sider
+css for frontpage er i index.css og for mars og jupiter i  mars css */
+
+* {
     padding:0;
     margin:0;
     box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 h2 {
@@ -11,5 +18,35 @@ h2 {
     
 }
 
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top:4vh;
+    position:sticky;
+    top:0px;
+}
 
-/* potentia for life - fakta bg color # */
+.navigasjon-liste {
+    display: flex;
+    gap:1rem;
+    list-style-type: none;
+    list-style-position: inside; /* bullet inne i box */
+    
+   
+}
+
+div.logo {
+    color:white;
+
+}
+
+/* logo */
+span.planeT {
+    font-family: "Jockey One", serif;
+    color:#ff5959;
+    font-size: 2rem;
+    font-weight: 400;
+
+}
